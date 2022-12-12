@@ -6,7 +6,7 @@ inquirer
         {
             type: 'input',
             message: 'What is the title?',
-            name: 'readme title',
+            name: 'readmeTitle',
         },
         {
             type: 'input',
@@ -21,22 +21,22 @@ inquirer
         {
             type: 'input',
             message: 'What are the user instructions?',
-            name: 'user instructions',
+            name: 'userInstructions',
         },
         {
             type: 'input',
             message: 'What is the usage information?',
-            name: 'usage information',
+            name: 'usageInformation',
         },
         {
             type: 'input',
             message: 'What are the contribution guidelines?',
-            name: 'contribution guidelines',
+            name: 'contributionGuidelines',
         },
         {
             type: 'input',
             message: 'What are the test instructions?',
-            name: 'test instructions',
+            name: 'testInstructions',
         },
     ])
 

@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 inquirer
     .prompt([
@@ -38,3 +39,10 @@ inquirer
             name: 'test instructions',
         },
     ])
+
+    .then((response) => {
+        console.log("generating README");
+        fs.writeFile('README.md', inquirerResponse, data);
+        (err) => err ? console.error(err) : console.log('success!')
+    });
+    

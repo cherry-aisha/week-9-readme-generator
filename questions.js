@@ -40,10 +40,10 @@ inquirer
             name: 'testInstructions',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             message: 'Please choose a licence',
-            choices: 'MIT Licesnce , Apache License 2.0, GNU General Public Licence',
             name: 'licence',
+            choices: ['MIT Licesnce' , 'Apache License 2.0', 'GNU General Public Licence'],
         },
         {
             type: 'input',
@@ -58,8 +58,12 @@ inquirer
 
     ])
 
-    .then((response) => {
+    .then((answers) => {
+        const readMePageContent = generateReadMe(answers);
+
         console.log("generating README");
-        fs.generateReadMe('README.md', inquirerResponse, data);
-        (err) => err ? console.error(err) : console.log('success!')
+        
+        fs.generateReadMe('README.md', readMePageContent, (err) =>
+        err ? console.log(err) : console.log('Succesfully created ReadMe!')
+        );
     });

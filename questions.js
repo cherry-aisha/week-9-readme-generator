@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const createReadMe = require('./createreadme');
 
 inquirer
     .prompt([
@@ -38,11 +39,27 @@ inquirer
             message: 'What are the test instructions?',
             name: 'testInstructions',
         },
+        {
+            type: 'checkbox',
+            message: 'Please choose a licence',
+            choices: 'MIT Licesnce , Apache License 2.0, GNU General Public Licence',
+            name: 'licence',
+        },
+        {
+            type: 'input',
+            message: 'What is your GitHub username?',
+            name: 'gitHubUser',
+        },
+        {
+            type: 'input',
+            message: 'What is your email address?',
+            name: 'email',
+        },
+
     ])
 
     .then((response) => {
         console.log("generating README");
-        fs.writeFile('README.md', inquirerResponse, data);
+        fs.generateReadMe('README.md', inquirerResponse, data);
         (err) => err ? console.error(err) : console.log('success!')
     });
-    

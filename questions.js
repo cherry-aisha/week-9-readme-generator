@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createReadMe = require('./createreadme.js');
+const createReadMe = require('./createreadme');
 
 inquirer
     .prompt([
@@ -63,7 +63,7 @@ inquirer
 
         console.log("generating README");
         
-        fs.generateReadMe('README.md', readMePageContent, (err) =>
+        fs.writeFile('README.md', readMePageContent, (err) =>
         err ? console.log(err) : console.log('Succesfully created ReadMe!')
         );
     });

@@ -1,46 +1,43 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
-const questions = require('./questions');
 
-const generateReadMe = ({readmeTitle, description, installation, userInstructions, usageInformation, contributionGuidelines, testInstructions, licence, gitHubUser, email}) =>
-`#${readmeTitle}
+function generateReadMe(data) { //({readmeTitle, description, installation, userInstructions, usageInformation, contributionGuidelines, testInstructions, licence, gitHubUser, email}) =>
+`#${data.readmeTitle}
 
-## Description
+## Table of Contents
 \```\
-${description}
+1. [Description])#(Descripton)\n,
+2. [User Instructions])#(userInstruction)\n,
+3. [Usage Instruvtions])#(usageInstructions)\n,
+4. [Contribution]#(guidelines.name)\n,
+5. [Test Instructions]#(testInstructions),
 \```\
 
-### Table of Contents
+### Description
 \```\
-1. ${installation.name},
-2. ${userInstructions.name},
-3. ${usageInformation.name},
-4. ${contributionGuidelins.name},
-5. ${testInstructions.name},
+${data.description}
 \```\
 
 ##### Installation
 \```\
-${installation}
+${data.installation}
 \```\
 
 ###### Usage
 \```\
-${usageInstructions}
+${data.userInstructions}
 \```\
 
 ###### Usage
 \```\
-${usageInformation}
+${data.usageInformation}
 \```\
 
 ####### Contributing
 \```\
-${contributionGuidelines}
+${data.contributionGuidelines}
 \```\
 ######## Tests
 \```\
-${testInstructions}
+${data.testInstructions}
 \```\
 ########## Licence
 \```\
@@ -52,6 +49,11 @@ This application is covered under the ${licence} licence.
 \```\
 ########### Contact Me
 \```\
-If you have questions abou tthis application you can reach me at ${email}
+If you have questions abou this application you can reach me at ${email}
 \```\
-`;
+`
+;}
+
+module.export = generateReadMe;
+
+return;

@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createReadMe = require('./createreadme');
+const generateReadMe = require('./createreadme');
 
 inquirer
     .prompt([
@@ -62,8 +62,21 @@ inquirer
         const readMePageContent = generateReadMe(answers);
 
         console.log("generating README");
+
+        
         
         fs.writeFile('README.md', readMePageContent, (err) =>
         err ? console.log(err) : console.log('Succesfully created ReadMe!')
         );
     });
+
+    // TODO: Create a function to initialize app
+//function init() { 
+  //  inquirer.prompt(questions).then(answer => {
+  //      console.log(answer)
+ //       generateReadMe("ReadMe.md", answer)
+//    })
+  
+//}
+// Function call to initialize app
+//init();

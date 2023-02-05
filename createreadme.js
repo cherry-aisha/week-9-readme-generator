@@ -1,5 +1,5 @@
 const fs = require('fs');
-const questions = require('questions.js');
+const questions = require('./questions');
 
 const generateReadMe = ({readmeTitle, description, installation, userInstructions, usageInformation, contributionGuidelines, testInstructions, licence, gitHubUser, email}) =>
 `#${readmeTitle}

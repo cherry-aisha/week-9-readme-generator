@@ -59,6 +59,7 @@ inquirer
     ])
 
     .then((answers) => {
+        
         const readMePageContent = generateReadMe(answers);
 
         console.log("generating README");

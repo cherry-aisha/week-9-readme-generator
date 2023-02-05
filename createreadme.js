@@ -1,59 +1,65 @@
 
-function generateReadMe(data) { //({readmeTitle, description, installation, userInstructions, usageInformation, contributionGuidelines, testInstructions, licence, gitHubUser, email}) =>
+function generateReadMe(data) {
+
+    console.log(data);
+    //({readmeTitle, description, installation, userInstructions, usageInformation, contributionGuidelines, testInstructions, licence, gitHubUser, email}) =>
+
+    const markdown =
+
 `#${data.readmeTitle}
 
+## Licence
+
+This application is covered under the ${data.licence} licence.
+
 ## Table of Contents
-\```\
-1. [Description])#(Descripton)\n,
-2. [User Instructions])#(userInstruction)\n,
-3. [Usage Instruvtions])#(usageInstructions)\n,
-4. [Contribution]#(guidelines.name)\n,
-5. [Test Instructions]#(testInstructions),
-\```\
+
+1. [Description](#descripton)
+2. [Installation](#installation)
+3. [Usage Instrutions](#user-instructions)
+4. [Usage Information](#usage-information)
+5. [Contribution Guildlines](#contribution-guidelines)
+6. [Test Instructions](#test-instructions)
+
 
 ### Description
-\```\
+
 ${data.description}
-\```\
 
-##### Installation
-\```\
+
+### Installation
+
 ${data.installation}
-\```\
 
-###### Usage
-\```\
+
+### Usage Instructions
+
 ${data.userInstructions}
-\```\
 
-###### Usage
-\```\
+
+### Usage Information
+
 ${data.usageInformation}
-\```\
 
-####### Contributing
-\```\
+
+### Contribution Guidelines
+
 ${data.contributionGuidelines}
-\```\
-######## Tests
-\```\
+
+### Test Instructions
+
 ${data.testInstructions}
-\```\
-########## Licence
-\```\
-This application is covered under the ${licence} licence.
-\```\
-########### GitHub Repo
-\```\
-[View GitHub Repo](https://github.com/${gitHubUser})
-\```\
-########### Contact Me
-\```\
-If you have questions abou this application you can reach me at ${email}
-\```\
+
+### GitHub Repo
+
+[View GitHub Repo](https://github.com/${data.gitHubUser})
+
+### Contact Me
+
+If you have questions abou this application you can reach me at ${data.email}
+
 `
-;}
-
-module.export = generateReadMe;
-
-return;
+        ;
+    return markdown;
+}
+module.exports = generateReadMe;

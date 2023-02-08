@@ -41,9 +41,9 @@ inquirer
         },
         {
             type: 'list',
-            message: 'Please choose a licence',
-            name: 'licence',
-            choices: ['MIT Licesnce' , 'Apache License 2.0', 'GNU General Public Licence'],
+            message: 'Please choose a license',
+            name: 'license',
+            choices: ['MIT license' , 'Apache License 2.0', 'GNU General Public license', 'None'],
         },
         {
             type: 'input',

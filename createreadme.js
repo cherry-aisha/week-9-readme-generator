@@ -1,4 +1,30 @@
+// Return license badge based on which license is passed in or return empty string
+function renderLicenseBadge (license) {
+    if (license !== 'None') {
+        return `![GitHub license](https://img.shields.io/bagde/license${license}-blue.sgv)`;
+    }
+    return '';
+    }
 
+    // Return licence URL or an empty string
+    function renderLicenseLink(license) {
+        if (license !== 'None') {
+            return `\n* [License](£license)\n`
+        }
+        return '';
+    }
+
+    // Return license section of README or return an empty string
+    function renderLicenseSection(license) {
+        if (license !== 'None') {
+            return `## License
+            This project is licensed under the ${license} license`;
+        }
+        return '';
+
+    }
+
+//Create the markdown for the ReadMe file
 function generateReadMe(data) {
 
     console.log(data);
@@ -6,11 +32,8 @@ function generateReadMe(data) {
 
     const markdown =
 
-`#${data.readmeTitle}
-
-## Licence
-
-This application is covered under the ${data.licence} licence.
+`# ${data.readmeTitle}
+${renderLicenseBadge}
 
 ## Table of Contents
 
@@ -23,7 +46,7 @@ This application is covered under the ${data.licence} licence.
 
 
 ### Description
-
+${renderLicenseLink(data.license)}
 ${data.description}
 
 
@@ -33,7 +56,6 @@ ${data.installation}
 
 
 ### Usage Instructions
-
 ${data.userInstructions}
 
 

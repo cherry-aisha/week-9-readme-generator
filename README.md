@@ -1,8 +1,10 @@
-#test
-
-## Licence
-
-This application is covered under the GNU General Public Licence licence.
+# tesy
+function renderLicenseBadge (license) {
+    if (license !== 'None') {
+        return `![GitHub license](https://img.shields.io/bagde/license${license}-blue.sgv)`;
+    }
+    return '';
+    }
 
 ## Table of Contents
 
@@ -16,37 +18,38 @@ This application is covered under the GNU General Public Licence licence.
 
 ### Description
 
-test
+* [License](£license)
+
+tesy
 
 
 ### Installation
 
-test
+tesy
 
 
 ### Usage Instructions
-
-test
+tesy
 
 
 ### Usage Information
 
-test
+tesy
 
 
 ### Contribution Guidelines
 
-test
+tesy
 
 ### Test Instructions
 
-test
+tesy
 
 ### GitHub Repo
 
-[View GitHub Repo](https://github.com/test)
+[View GitHub Repo](https://github.com/tesy)
 
 ### Contact Me
 
-If you have questions abou this application you can reach me at test
+If you have questions abou this application you can reach me at tesy
 

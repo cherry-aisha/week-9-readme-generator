@@ -70,14 +70,3 @@ inquirer
         err ? console.log(err) : console.log('Succesfully created ReadMe!')
         );
     });
-
-    // TODO: Create a function to initialize app
-//function init() { 
-  //  inquirer.prompt(questions).then(answer => {
-  //      console.log(answer)
- //       generateReadMe("ReadMe.md", answer)
-//    })
-  
-//}
-// Function call to initialize app
-//init();

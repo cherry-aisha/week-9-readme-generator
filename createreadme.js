@@ -20,7 +20,7 @@ function renderLicenseBadge (license) {
             return `## License
             This project is licensed under the ${license} license`;
         }
-        return '';
+        return licenseBadge(license) + "\r" + link + "";
 
     }
 
@@ -33,7 +33,8 @@ function generateReadMe(data) {
     const markdown =
 
 `# ${data.readmeTitle}
-${renderLicenseBadge}
+${renderLicenseSection(data.license)}
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents
 

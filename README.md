@@ -1,10 +1,7 @@
-# tesy
-function renderLicenseBadge (license) {
-    if (license !== 'None') {
-        return `![GitHub license](https://img.shields.io/bagde/license${license}-blue.sgv)`;
-    }
-    return '';
-    }
+# test
+## License
+            This project is licensed under the Apache License 2.0 license
+![GitHub license](https://img.shields.io/bagde/licenseApache License 2.0-blue.sgv)
 
 ## Table of Contents
 
@@ -20,36 +17,36 @@ function renderLicenseBadge (license) {
 
 * [License](£license)
 
-tesy
+test
 
 
 ### Installation
 
-tesy
+test
 
 
 ### Usage Instructions
-tesy
+test
 
 
 ### Usage Information
 
-tesy
+test
 
 
 ### Contribution Guidelines
 
-tesy
+test
 
 ### Test Instructions
 
-tesy
+test
 
 ### GitHub Repo
 
-[View GitHub Repo](https://github.com/tesy)
+[View GitHub Repo](https://github.com/test)
 
 ### Contact Me
 
-If you have questions abou this application you can reach me at tesy
+If you have questions abou this application you can reach me at test
 

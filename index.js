@@ -66,7 +66,7 @@ inquirer
 
         
         
-        fs.writeFile('README.md', readMePageContent, (err) =>
+        fs.writeFile('READMEPAGE.md', readMePageContent, (err) =>
         err ? console.log(err) : console.log('Succesfully created ReadMe!')
         );
     });
